@@ -1,0 +1,620 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    max-width: 1920px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins';
+}
+
+            /* Header */
+
+
+header {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 2fr;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    background-image: linear-gradient(#ffc78f, #fff 64%, #fff 96%);
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    line-height: 100%
+    
+}
+
+.header-content p {
+    font-size: 1rem;
+}
+
+.header-content {
+    padding-left: 50px
+}
+
+
+
+header img {
+    width: 30vw;
+    height: auto;
+    border-radius: 25px;
+    min-width: 200px;
+    justify-self: center;
+}
+
+
+            /* Navigation */
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 10%; /* 10% Platz auf der linken Seite */
+    right: 10%; /* 10% Platz auf der rechten Seite */
+    width: 80%; /* Die Breite der Navbar ist 80% des Bildschirms */
+    background-color: #ebf4ff; /* Oder eine andere Farbe, wenn gewünscht */
+    z-index: 1000; /* Stellt sicher, dass die Navbar über anderen Elementen liegt */
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 5px;
+}
+
+nav img {
+    height: 50px; /* Oder eine andere passende Größe */
+    padding-right: 20px; /* Abstand zwischen Logo und Navigationslinks */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;   
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+nav h1 {
+    width: 200px;
+    margin-left: -15px;
+    line-height: 100%
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    width: 100%; /* Ermöglicht es den Listenelementen, die volle Breite der Navbar zu nutzen */
+}
+
+nav ul li {
+    margin: 0 15px; /* Fügt Abstand zwischen den Listenelementen hinzu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Oder eine andere Farbe */
+}
+
+
+
+            /* Werdegang */
+
+
+#Werdegang {
+    position: relative;
+    margin: 40px auto; /* Zentriert den Werdegang-Bereich */
+    padding: 20px 0;
+    width: 80%; /* Anpassung der Breite des Werdegang-Bereichs */
+}
+
+#Werdegang::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    bottom: 0;
+    border-left: 2px solid black;
+}
+
+#Werdegang ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Werdegang li {
+    position: relative;
+    width: 45%; /* Breite jedes Listenelements */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #ffc78f;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+        
+}
+
+#Werdegang li:nth-child(odd) {
+    margin-right: 55%; /* Positioniert den Text links von der Mittellinie */
+    text-align: right;
+}
+
+#Werdegang li:nth-child(even) {
+    margin-left: 55%; /* Positioniert den Text rechts von der Mittellinie */
+    text-align: left;
+}
+
+#Werdegang h2 { 
+    text-align: center; /* Zentriert die Überschrift */
+    font-size: 3em;
+}
+
+#Werdegang ul li {
+    font-size: 1.2em; /* Erhöht die Schriftgröße */
+    /* Weitere Stile für die Listenelemente */
+}
+
+
+
+                /*Fertigkeiten*/
+
+
+
+#Fertigkeiten {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+#Fertigkeiten h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.flip-karte-container {
+    width: 347px;
+    height: 506.6px;
+    perspective: 1000px;
+    padding-bottom: 20px;
+}
+
+.flip-karte {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flip-karte-front, .flip-karte-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-karte-back {
+    transform: rotateY(180deg)
+}
+
+.flip-karte-container:hover .flip-karte {
+    transform: rotateY(180deg);
+}
+
+#lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(51, 51, 51, 0.66);
+	z-index: 1000;
+	align-items: center;
+    justify-content: center;
+}
+
+#lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#lightbox.flexvisible {
+	display: flex;	
+}
+
+
+                /*Portfolio*/
+                /*Schach Spiel*/
+
+#Portfolio h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#SchachContainer {
+   display:grid;
+   grid-template-areas: "schachbrett schachtext"
+}
+
+#Portfolio h3 {
+    text-align : left;
+    font-size: 2rem;
+}
+
+.schachbrett {
+    width: 80vw;
+    height: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: schachbrett;
+    max-width: 600px;
+}
+
+#schachtext {
+    grid-area: schachtext;
+    text-align: left;
+    font-size: 1.2em;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.feld {
+    width: 12.5%;
+    height: 12.5%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.white {
+    background-color: #f0d9b5;
+}
+
+.black {
+    background-color: #b58863;
+}
+
+.koordinate {
+    height: auto;
+    display: flex;
+    bottom: 4%;
+    left: 4%;
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reihe {
+    top: 4%;
+    right: 4%;
+    left: auto;
+}
+.whiteText {
+    color: #f0d9b5;
+}
+.blackTest {
+    color: #b58863;
+}
+
+.figur {
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.figurenBild {
+    max-width: 100%;
+    width:100%;
+    height: auto;
+}
+                
+
+                /*Shooter Spiel*/
+
+
+#ShooterContainer {
+    display: grid;
+    grid-template-areas: "shootertext gameFrame";
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#shootertext {
+    grid-area: shootertext;
+    text-align: right;
+    font-size: 1.2em;
+    max-width: 600px;
+    padding: 10px;
+}
+
+#shootertext h3 {
+    text-align: right;
+}
+
+#gameFrame {
+    background-image: url('gasse.webp');
+    background-size: cover;
+    background-position: center;
+    height: 45vw;
+    width: 80vw;
+    max-width: 800px;
+    max-height: 450px;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+    overflow: hidden;
+    cursor: crosshair;
+    grid-area: gameFrame;
+}
+
+.enemy {
+    position: absolute;
+    bottom: -400px;
+    transition: all .5s;
+    height: auto;
+
+}
+
+.enemy.showing {
+    bottom: 0px;
+}
+
+.enemy.dead {
+    transform: rotate(90deg);
+    bottom: -140px;
+}
+
+#enemy1 {
+    left: 5%;
+}
+
+#enemy2 {
+    left: 25%;
+}
+
+#enemy3 {
+    left: 50%;
+}
+
+#enemy4 {
+    left: 75%;
+}
+
+#enemy5 {
+    left: 80%;
+}
+
+#healthBar {
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 20px;
+    width: 100%;
+    background-color: red;
+    transition: width .5s;
+    z-index: 40;
+}
+
+#SpielStarten {
+    height: 100%;
+    width: 100%;
+    background-image: url('ErnestAreShootingGame.png');
+    background-size: cover;
+    background-position: center;
+    
+    border: 0;
+    box-shadow: none;
+    
+    font-size: 5em;
+    letter-spacing: -2px;
+    
+    
+}
+
+                
+
+
+                /*Footer*/
+
+
+
+footer {
+    background-color: #ebf4ff;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    height: 300px
+}
+
+footer h2 {
+    font-size: 2rem;
+    
+}
+
+footer p {
+    margin: 0;
+    padding: 5px;
+}
+
+footer img {
+    float: left;
+}
+
+#rechte-seite-footer {
+    float: right;
+}
+
+
+            /* Media Queries */
+
+
+
+@media (max-width: 1000px) {
+    #Werdegang li:nth-child(odd) {
+        margin-left: -30px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    header {
+        display:inline-block;
+    }
+    
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        padding-right: 20px;
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: visibility 0.3s;
+        position: fixed;
+        left: -110%;
+        top: 70px;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        border: 1px solid black;
+        border-radius: 25px;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #ebf4ff;
+        padding: 20px 0;
+    }
+    
+    nav-item {
+        margin: 16px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+        visibility: visible;
+        height: auto;
+    }
+    
+    .header-content {
+        margin-top: 200px;
+        padding-left: 0px;
+    }
+    
+}
+
+@media (min-width: 685px) {
+    .schachbrett {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .koordinate {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 425px) {
+    #Werdegang li:nth-child(even) {
+        margin-left: 52%
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    #ShooterContainer {
+        display: block;
+    }
+    #SchachContainer {
+        display: block;
+    }
+    #shootertext {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #shootertext h3 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #schachtext {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #Portfolio h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .enemy {
+        width: 10vw;
+        max-width: 100px;
+    }
+}
